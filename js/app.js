@@ -28,7 +28,6 @@ const loadPhone = () => {
 /* display show  */
 const displayPhone = (phones) => {
     for(const phone of phones){
-        
         const div = document.createElement('div')
         div.classList.add("col-lg-4")
         div.classList.add("mb-3")
@@ -74,7 +73,7 @@ const displayPhone = (phones) => {
         <li class="list-group-item "> Memory :${phone.mainFeatures.memory} </li>
         <li class="list-group-item "> storage:${phone.mainFeatures.storage} </li>
         <br>
-        <p>Sensor:</p>
+        <p>Sensor :</p>
         <li class="list-group-item "> Sensor :${phone.mainFeatures.sensors} </li>
         <br>
         <p>Others:</p>
