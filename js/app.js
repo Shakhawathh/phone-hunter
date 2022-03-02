@@ -9,7 +9,7 @@ const loadPhone = () => {
     const searchText = input.value ;
 
     if(searchText == ""){
-      error.innerText = "please enter your phone name"
+      error.innerText = "please write something to get your phone"
       input.value=""
       main.innerHTML = ''
     }
@@ -27,23 +27,29 @@ const loadPhone = () => {
 }
 /* display show  */
 const displayPhone = (phones) => {
-    for(const phone of phones){
-        const div = document.createElement('div')
-        div.classList.add("col-lg-4")
-        div.classList.add("mb-3")
-        div.classList.add("mt-5")
-        div.innerHTML = `
-          <div class=" card shadow-lg pt-3 mb-5 bg-body rounded w-auto mx-auto" style="width: 18rem;">
-            <img src="${phone.image}" class="card-img-top w-75 mt-3 rounded mx-auto d-block " alt="...">
-            <div class="card-body my-2 text-center">
-            <h5 class="card-title fw-bolder">Name:${phone.phone_name}</h5>
-            <p class="card-text fw-bold"">Brand:${phone.brand}</p>
-            <button onclick="phoneDetails('${phone.slug}')" class="btn btn-primary">Details</button>
-            </div>
-          </div>
-        `;
-        main.appendChild(div)
-    }
+   if(phones.length !== 0){
+      for(const phone of phones){
+         const div = document.createElement('div')
+         div.classList.add("col-lg-4")
+         div.classList.add("mb-3")
+         div.classList.add("mt-5")
+         div.innerHTML = `
+           <div class=" card shadow-lg pt-3 mb-5 bg-body rounded w-auto mx-auto" style="width: 18rem;">
+             <img src="${phone.image}" class="card-img-top w-75 mt-3 rounded mx-auto d-block " alt="...">
+             <div class="card-body my-2 text-center">
+             <h5 class="card-title fw-bolder">Name:${phone.phone_name}</h5>
+             <p class="card-text fw-bold"">Brand:${phone.brand}</p>
+             <button onclick="phoneDetails('${phone.slug}')" class="btn btn-primary">Details</button>
+             </div>
+           </div>
+         `;
+         main.appendChild(div)
+     }
+   }
+   else{
+      error.innerText = "please enter your phone name"
+   }
+    
   }
   /* detail information */
     const phoneDetails = (id) =>{
