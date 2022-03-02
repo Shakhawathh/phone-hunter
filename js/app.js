@@ -47,7 +47,7 @@ const displayPhone = (phones) => {
      }
    }
    else{
-      error.innerText = "please enter your phone name"
+      error.innerText = "No phone found please enter your phone name"
    }
     
   }
