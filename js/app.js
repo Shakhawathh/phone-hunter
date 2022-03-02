@@ -62,7 +62,7 @@ const displayPhone = (phones) => {
    <div class="card shadow-lg bg-body rounded  mx-auto mt-5 " style="width: 18rem;">
    <img src="${phone.image}" class="card-img-top mt-3 w-75 rounded rounded mx-auto d-block" alt="...">
    <div class="card-body">
-   <h3 class="card-title fw-bolder">Name :${phone.name}</h3>
+   <h4 class="card-title fw-bolder">Name :${phone.name}</h4>
    <p class="card-text fw-bold">Release Date : ${phone.releaseDate ? phone.releaseDate: 'No releasedate found.'}</p>
    <br>
    <div class="lh-1 text-start ">
