@@ -2,7 +2,7 @@
 const main = document.getElementById('main');
 const phoneDiv = document.getElementById('phone-detail')
 
-
+/* search part */
 const loadPhone = () => {
     const input = document.getElementById('search-text');
     const error = document.getElementById('error')
@@ -25,6 +25,7 @@ const loadPhone = () => {
    
     }
 }
+/* display show  */
 const displayPhone = (phones) => {
     for(const phone of phones){
         
