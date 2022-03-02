@@ -16,12 +16,12 @@ const loadPhone = () => {
     else{
         main.innerHTML = ''
         const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`
-       fetch(url)
-       .then(res => res.json())
-       .then(data => displayPhone(data.data.slice(0, 20)))
-       input.value="" 
-       error.innerHTML = ''
-       phoneDiv.innerHTML = ''
+        fetch(url)
+        .then(res => res.json())
+        .then(data => displayPhone(data.data.slice(0, 20)))
+        input.value="" 
+        error.innerHTML = ''
+        phoneDiv.innerHTML = ''
    
     }
 }
@@ -34,20 +34,20 @@ const displayPhone = (phones) => {
         div.classList.add("mb-3")
         div.classList.add("mt-5")
         div.innerHTML = `
-        <div class=" card shadow-lg pt-3 mb-5 bg-body rounded w-auto mx-auto" style="width: 18rem;">
-           <img src="${phone.image}" class="card-img-top w-75 mt-3 rounded mx-auto d-block " alt="...">
-           <div class="card-body my-2 text-center">
-           <h5 class="card-title fw-bolder">Name:${phone.phone_name}</h5>
-           <p class="card-text fw-bold"">Brand:${phone.brand}</p>
-           <button onclick="phoneDetails('${phone.slug}')" class="btn btn-primary">Details</button>
-           </div>
-        </div>
+          <div class=" card shadow-lg pt-3 mb-5 bg-body rounded w-auto mx-auto" style="width: 18rem;">
+            <img src="${phone.image}" class="card-img-top w-75 mt-3 rounded mx-auto d-block " alt="...">
+            <div class="card-body my-2 text-center">
+            <h5 class="card-title fw-bolder">Name:${phone.phone_name}</h5>
+            <p class="card-text fw-bold"">Brand:${phone.brand}</p>
+            <button onclick="phoneDetails('${phone.slug}')" class="btn btn-primary">Details</button>
+            </div>
+          </div>
         `;
         main.appendChild(div)
     }
   }
   /* detail information */
-  const phoneDetails = (id) =>{
+    const phoneDetails = (id) =>{
     const url = `https://openapi.programming-hero.com/api/phone/${id}`
     fetch(url)
     .then(res => res.json())
