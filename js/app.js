@@ -37,8 +37,8 @@ const displayPhone = (phones) => {
            <div class=" card shadow-lg pt-3 mb-5 bg-body rounded w-auto mx-auto" style="width: 18rem;">
              <img src="${phone.image}" class="card-img-top w-75 mt-3 rounded mx-auto d-block " alt="...">
              <div class="card-body my-2 text-center">
-             <h5 class="card-title fw-bolder">Name :${phone.phone_name}</h5>
-             <p class="card-text fw-bold"">Brand :${phone.brand}</p>
+             <h5 class="card-title fw-bolder">Name : ${phone.phone_name}</h5>
+             <p class="card-text fw-bold"">Brand : ${phone.brand}</p>
              <button onclick="phoneDetails('${phone.slug}')" class="btn btn-primary">Details</button>
              </div>
            </div>
