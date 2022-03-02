@@ -46,6 +46,7 @@ const displayPhone = (phones) => {
         main.appendChild(div)
     }
   }
+  /* detail information */
   const phoneDetails = (id) =>{
     const url = `https://openapi.programming-hero.com/api/phone/${id}`
     fetch(url)
